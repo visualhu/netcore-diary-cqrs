@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using MediatR;
 using NetCore.Diary.CQRS.Domain;
 using NetCore.Diary.CQRS.Domain.Mementos;
@@ -58,10 +59,11 @@ namespace NetCore.Diary.CQRS.Storage
                 _events.Add(@event);
             }
 
+            _mediator.Publish(new TestEvent());
             foreach (var @event in uncommittedChanges)
             {
                 var destEvent = Converter.ChangeTo(@event, @event.GetType());
-                _mediator.Publish(destEvent);
+                _mediator.Publish(destEvent,CancellationToken.None);
             }
         }
 

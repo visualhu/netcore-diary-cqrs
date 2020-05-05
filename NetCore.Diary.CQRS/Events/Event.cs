@@ -4,7 +4,7 @@ using MediatR;
 namespace NetCore.Diary.CQRS.Events
 {
     // public class Event:IEvent
-    public class Event:INotification
+    public class Event
     {
         public int Version;
         public Guid AggregateId { get; set; }

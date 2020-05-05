@@ -1,8 +1,9 @@
 ﻿using System;
+using MediatR;
 
 namespace NetCore.Diary.CQRS.Events
 {
-    public class ItemFromChangedEvent:Event
+    public class ItemFromChangedEvent:Event,INotification
     {
         public DateTime From { get; set; }
 

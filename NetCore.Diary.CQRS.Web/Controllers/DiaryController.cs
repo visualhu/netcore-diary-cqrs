@@ -2,6 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using NetCore.Diary.CQRS.Commands;
+using NetCore.Diary.CQRS.Events;
 using NetCore.Diary.CQRS.Exceptions;
 using NetCore.Diary.CQRS.Reporting;
 
@@ -25,13 +26,16 @@ namespace NetCore.Diary.CQRS.Web.Controllers
 
         public ActionResult Add()
         {
+            _mediator.Publish(new TestEvent());
             return View();
         }
 
         public ActionResult Delete(Guid id)
         {
             var item = _db.GetById(id);
+            
             _mediator.Send(new DeleteItemCommand(item.Id,item.Version));
+            
             return RedirectToAction("Index");
         }
 

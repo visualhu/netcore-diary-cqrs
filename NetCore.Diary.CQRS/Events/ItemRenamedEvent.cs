@@ -1,8 +1,9 @@
 ﻿using System;
+using MediatR;
 
 namespace NetCore.Diary.CQRS.Events
 {
-    public class ItemRenamedEvent:Event
+    public class ItemRenamedEvent:Event,INotification
     {
         public string Title { get; set; }
 

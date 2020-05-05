@@ -14,4 +14,13 @@
       </Reference>
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="EventHandlers\IEventHandler.cs" />
+      <Compile Remove="Utils\IEventHandlerFactory.cs" />
+      <Compile Remove="Utils\CommandHandlerFactory.cs" />
+      <Compile Remove="Utils\ICommandHandlerFactory.cs" />
+      <Compile Remove="Events\IHandle.cs" />
+      <Compile Remove="Events\IEvent.cs" />
+    </ItemGroup>
+
 </Project>

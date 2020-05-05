@@ -7,11 +7,11 @@ using NetCore.Diary.CQRS.Storage.Memento;
 namespace NetCore.Diary.CQRS.Domain
 {
     public class DiaryItem:AggregateRoot,
-        IHandle<ItemCreatedEvent>,
-        IHandle<ItemRenamedEvent>,
-        IHandle<ItemFromChangedEvent>,
-        IHandle<ItemToChangedEvent>,
-        IHandle<ItemDescriptionChangedEvent>,
+        IHandler<ItemCreatedEvent>,
+        IHandler<ItemRenamedEvent>,
+        IHandler<ItemFromChangedEvent>,
+        IHandler<ItemToChangedEvent>,
+        IHandler<ItemDescriptionChangedEvent>,
         IOriginator
     {
 

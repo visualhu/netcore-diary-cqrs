@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NetCore.Diary.CQRS.CommandHandlers;
 using NetCore.Diary.CQRS.Domain;
+using NetCore.Diary.CQRS.EventHandlers;
 using NetCore.Diary.CQRS.Reporting;
 using NetCore.Diary.CQRS.Storage;
 
@@ -30,9 +31,10 @@ namespace NetCore.Diary.CQRS.Web
         {
             services.AddScoped<IRepository<DiaryItem>, Repository<DiaryItem>>();
             services.AddSingleton<IEventStorage, InMemoryEventStorage>();
-            services.AddScoped<IReportDatabase, ReportDatabase>();
-            services.AddMediatR(typeof(ChangeItemCommandHandler).Assembly);
-                
+            services.AddSingleton<IReportDatabase, ReportDatabase>();
+            services.AddMediatR(typeof(CreateItemCommandHandler));
+
+
             services.AddControllersWithViews();
         }
 
