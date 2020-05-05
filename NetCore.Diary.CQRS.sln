@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore.Diary.CQRS", "NetCore.Diary.CQRS\NetCore.Diary.CQRS.csproj", "{80AC4F4F-616A-45DC-923A-BC47B9B0ABC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore.Diary.CQRS.Web", "NetCore.Diary.CQRS.Web\NetCore.Diary.CQRS.Web.csproj", "{28F38EDA-66FC-493F-BBAF-0149AEEFA49B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80AC4F4F-616A-45DC-923A-BC47B9B0ABC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80AC4F4F-616A-45DC-923A-BC47B9B0ABC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80AC4F4F-616A-45DC-923A-BC47B9B0ABC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80AC4F4F-616A-45DC-923A-BC47B9B0ABC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28F38EDA-66FC-493F-BBAF-0149AEEFA49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28F38EDA-66FC-493F-BBAF-0149AEEFA49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28F38EDA-66FC-493F-BBAF-0149AEEFA49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28F38EDA-66FC-493F-BBAF-0149AEEFA49B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

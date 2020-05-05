@@ -1,0 +1,22 @@
+﻿@model object
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "_Layout";
+}
+
+<h2>Diary Items</h2>
+<table>
+
+@foreach (var item in ViewBag.Model)
+{
+    <tr>
+        <td>@item.Title</td>
+        <td>@item.Version</td>
+        <td>@Html.ActionLink("Edit","Edit",new {id=item.Id})</td>
+        <td>@Html.ActionLink("Delete","Delete",new {id=item.Id})</td>
+    </tr>
+}
+</table>
+
+@Html.ActionLink("Add","Add")
